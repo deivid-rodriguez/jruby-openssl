@@ -1,5 +1,7 @@
 #-*- mode: ruby -*-
 
+require "bundler/gem_tasks"
+
 begin
   require 'ruby-maven'
 rescue LoadError
