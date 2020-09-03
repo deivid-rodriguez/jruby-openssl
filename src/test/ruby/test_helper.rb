@@ -24,7 +24,7 @@ end if defined? JRUBY_VERSION
 begin
   gem 'test-unit'
 rescue LoadError
-  warn "gem 'test-unit' not available, will load built-in 'test/unit'"
+  warn "gem 'test-unit' not available"
 end
 
 begin
@@ -59,7 +59,6 @@ end unless (Test::Unit::AutoRunner.respond_to?(:setup_option)) rescue true # run
 if defined? Minitest::Test
   TestCase = Minitest::Test
 else
-  require 'test/unit'
   TestCase = Test::Unit::TestCase
 end
 
