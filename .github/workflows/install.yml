@@ -19,5 +19,8 @@ jobs:
       - name: Install dependencies
         run: bundle install
 
+      - name: Build library
+        run: mvn package
+
       - name: Install library
         run: bundle exec rake install
