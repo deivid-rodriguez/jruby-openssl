@@ -22,5 +22,8 @@ jobs:
       - name: Build library
         run: mvn package
 
+      - name: See generated stuff
+        run: git diff
+
       - name: Install library
         run: bundle exec rake install
