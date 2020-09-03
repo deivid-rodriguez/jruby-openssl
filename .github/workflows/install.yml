@@ -20,7 +20,7 @@ jobs:
         run: bundle install
 
       - name: Build library
-        run: mvn package
+        run: mvn -X -e package
 
       - name: See generated stuff
         run: git diff
