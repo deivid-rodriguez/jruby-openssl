@@ -1,0 +1,23 @@
+name: install
+
+on: [pull_request, push]
+
+jobs:
+  install:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        ruby: [ jruby-9.2.13.0 ]
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Install library
+        run: bundle exec rake install
