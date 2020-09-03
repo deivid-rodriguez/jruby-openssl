@@ -6,7 +6,7 @@ gemspec
 gem "rake"
 
 # for less surprises with newer releases
-gem 'jar-dependencies', '~> 0.3.11', :require => nil
+gem 'jar-dependencies', '~> 0.4.0', :require => nil
 
 gem 'mocha', '~> 1.4', '< 2.0'
 
