@@ -64,7 +64,7 @@ plugin( :compiler, '3.1',
 
   execute_goal :compile,
                :id => 'compile-populators', :phase => 'process-classes',
-               :includes => [ 'org/jruby/gen/**/*.java' ],
+               :includes => [ 'org/jruby/**/*.java' ],
                :optimize => true,
                :compilerArgs => [ '', '-XDignore.symbol.file=true' ]
 end
