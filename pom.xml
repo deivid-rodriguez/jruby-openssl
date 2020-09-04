@@ -96,6 +96,12 @@ DO NOT MODIFIY - GENERATED CODE
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>rubygems</groupId>
+      <artifactId>test-unit</artifactId>
+      <version>3.3.6</version>
+      <type>gem</type>
+    </dependency>
+    <dependency>
       <groupId>org.bouncycastle</groupId>
       <artifactId>bcprov-jdk15on</artifactId>
       <version>1.65</version>
