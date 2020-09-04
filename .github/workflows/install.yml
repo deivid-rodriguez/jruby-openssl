@@ -28,6 +28,9 @@ jobs:
       - name: See generated stuff
         run: git diff
 
+      - name: Verify there are warnings before installing the library
+        run: gem list jruby-openssl
+
       - name: Install library
         run: bundle exec rake install
 
