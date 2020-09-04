@@ -7,7 +7,7 @@ distribution_management do
   repository :id => :ossrh, :url => 'https://oss.sonatype.org/service/local/staging/deploy/maven2/'
 end
 
-java_target = '1.7'
+java_target = '11'
 gen_sources = '${basedir}/target/generated-sources' # hard-coded in AnnotationBinder
 
 plugin( 'org.codehaus.mojo:exec-maven-plugin', '1.3.2' ) do
