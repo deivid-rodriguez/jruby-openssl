@@ -136,8 +136,6 @@ plugin! :dependency do
                :includeGroupIds => 'org.bouncycastle'
 end
 
-jruby_plugin(:runit) { execute_goal( :test, :runitDirectory => '${runit.dir}' ) }
-
 invoker_run_options = {
     :id => 'tests-with-different-bc-versions',
     :projectsDirectory => 'integration',
