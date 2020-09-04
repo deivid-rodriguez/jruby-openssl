@@ -30,3 +30,8 @@ jobs:
 
       - name: Install library
         run: bundle exec rake install
+
+      - name: Make sure jruby boots without warnings now
+        run: |
+          gem list jruby-openssl 2> errors.txt
+          test ! -s errors.txt || (cat errors.txt && exit 1)
